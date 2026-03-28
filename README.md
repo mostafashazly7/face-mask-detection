@@ -1,72 +1,143 @@
-# 😷 Face Mask Detection using Deep Learning
+# 😷 Face Mask Detection using Deep Learning (CNN)
 
-A deep learning-based computer vision project that detects whether a person is wearing a face mask or not using Convolutional Neural Networks (CNN).
+## 📌 Overview
+This project uses a Convolutional Neural Network (CNN) to detect whether a person is wearing a face mask or not from images.
 
----
-
-## 📌 Project Overview
-This project aims to classify images into two categories:
-- ✅ With Mask  
-- ❌ Without Mask  
-
-The model is trained on a dataset from Kaggle and achieves high accuracy on unseen data.
+The model is trained on a labeled dataset and achieves high accuracy in binary classification:
+- ✅ With Mask
+- ❌ Without Mask
 
 ---
 
 ## 📂 Dataset
-The dataset is sourced from Kaggle:
+Dataset sourced from Kaggle:
 
-🔗 https://www.kaggle.com/datasets/omkargurav/face-mask-dataset
+- 📎 Face Mask Dataset  
+- Total images: **7553**
+  - With Mask: **3725**
+  - Without Mask: **3828**
 
-- Total Images: **7553**
-- With Mask: **3725**
-- Without Mask: **3828**
-
----
-
-## ⚙️ Technologies Used
-- Python 🐍  
-- TensorFlow / Keras 🤖  
-- NumPy  
-- OpenCV  
-- Matplotlib  
+### Classes:
+| Label | Description |
+|------|------------|
+| 1 | With Mask |
+| 0 | Without Mask |
 
 ---
 
-## 🧠 Model Architecture
-The model is built using a Convolutional Neural Network (CNN):
-
-- Conv2D (32 filters) + ReLU  
-- MaxPooling  
-- Conv2D (64 filters) + ReLU  
-- MaxPooling  
-- Flatten  
-- Dense (128) + Dropout  
-- Dense (64) + Dropout  
-- Output Layer (2 classes)
+## 🧹 Data Preprocessing
+- Loaded images from directories
+- Resized all images to **128x128**
+- Converted images to RGB format
+- Normalized pixel values (0 → 1)
+- Converted data into NumPy arrays
+- Train/Test split: **80% / 20%**
 
 ---
 
-## 🚀 Training Details
-- Image Size: **128x128**
-- Train/Test Split: **80/20**
-- Epochs: **5**
-- Optimizer: **Adam**
-- Loss Function: **Sparse Categorical Crossentropy**
+## 🧠 Model Architecture (CNN)
+
+```
+Input (128x128x3)
+↓
+Conv2D (32 filters) + ReLU
+↓
+MaxPooling
+↓
+Conv2D (64 filters) + ReLU
+↓
+MaxPooling
+↓
+Flatten
+↓
+Dense (128) + ReLU
+↓
+Dropout (0.5)
+↓
+Dense (64) + ReLU
+↓
+Dropout (0.5)
+↓
+Output Layer (2 neurons, Sigmoid)
+```
 
 ---
 
-## 📊 Results
-- ✅ Training Accuracy: ~93%  
-- ✅ Validation Accuracy: ~91%  
-- ✅ Test Accuracy: **~91.7%**
+## ⚙️ Training Details
+- Optimizer: Adam
+- Loss Function: Sparse Categorical Crossentropy
+- Epochs: 5
+- Validation Split: 10%
 
 ---
 
-## 📈 Performance Visualization
-The model performance was evaluated using:
-- Loss Curve 📉  
-- Accuracy Curve 📈  
+## 📈 Model Performance
+
+- ✅ **Training Accuracy:** ~93%
+- ✅ **Validation Accuracy:** ~91%
+- ✅ **Test Accuracy:** **~91.7%**
 
 ---
 
+## 📊 Visualizations
+- Training vs Validation Loss
+- Training vs Validation Accuracy
+
+---
+
+## 🔮 Prediction
+You can test the model on any image:
+
+```python
+input_image_path = 'path_to_image.jpg'
+```
+
+### Output:
+- `The person is wearing a mask`
+- `The person is not wearing a mask`
+
+---
+
+## 🚀 How to Run
+
+1. Clone the repository:
+```bash
+git clone https://github.com/mostafashazly7/face-mask-detection
+```
+
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+3. Run the notebook or script
+
+---
+
+## 🛠️ Technologies Used
+- Python 🐍
+- NumPy
+- OpenCV
+- Matplotlib
+- TensorFlow / Keras
+- PIL (Python Imaging Library)
+
+---
+
+## 📌 Future Improvements
+- Use Transfer Learning (ResNet, MobileNet)
+- Improve accuracy with more epochs
+- Real-time detection using webcam 🎥
+- Deploy as a web app (Streamlit / Flask)
+
+---
+
+## 👤 Author
+**Mostafa Shazly**
+
+- GitHub: https://github.com/mostafashazly7
+
+---
+
+## ⭐ Support
+If you like this project, please ⭐ the repository!
