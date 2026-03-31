@@ -115,7 +115,7 @@ pip install -r requirements.txt
 ---
 
 ## 🛠️ Technologies Used
-- Python 🐍
+- Python 
 - NumPy
 - OpenCV
 - Matplotlib
