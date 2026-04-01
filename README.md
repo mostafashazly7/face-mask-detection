@@ -120,7 +120,7 @@ pip install -r requirements.txt
 - OpenCV
 - Matplotlib
 - TensorFlow / Keras
-- PIL (Python Imaging Library)
+- PIL(Python Imaging Library)
 
 ---
 
