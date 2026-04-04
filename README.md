@@ -138,4 +138,4 @@ pip install -r requirements.txt
 ---
 
 ## ⭐ Support
-If you like this project, please ⭐ the repository!
+If you like this project,please ⭐ the repository!
