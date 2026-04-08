@@ -148,5 +148,5 @@ The following industry-standard tools and libraries were used to build, train, a
   <br>
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:ff6f00,50:d00000,100:1a0a2e&height=100&section=footer"/>
   <br>
-  <i>⭐ If you found this repository helpful, please consider leaving a star! ⭐</i>
+  <i>⭐ If you found this repository helpful, please consider leaving a star!⭐</i>
 </div>
